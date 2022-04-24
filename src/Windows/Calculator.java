@@ -34,6 +34,7 @@ public class Calculator extends JFrame{
 		this.initScreenInAComponent();
 	}
 	
+	// init Screen
 	void initScreenInAComponent() {
 		screenPanel.add(screenLabel);
 		this.insertScreenComponentInTheContainer();
