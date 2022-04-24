@@ -21,7 +21,7 @@ public class Calculator extends JFrame{
 	private NumberPanel numberPanel;
 	private OperatorPanel operatorPanel;
 	private FonctionPanel functionPanel;
-	private GroupButton grouButton;
+	private GroupButton groupButton;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
@@ -47,7 +47,24 @@ public class Calculator extends JFrame{
 		timeLabel=new TimeLabel();
 		timePanel=new TimePanel();
 		this.initTimeInAComponent();
+		this.initNumberComponent();
+		this.initComponentGroupButton();
 		
+	}
+	
+	void initNumberComponent() {
+		this.numberPanel=new NumberPanel();
+	}
+	void initOperatorComponent(){
+		this.operatorPanel=new OperatorPanel();
+	}
+	
+	void initFunctionOperator() {
+		this.functionPanel=new FonctionPanel();
+	}
+	
+	void initComponentGroupButton() {
+		this.groupButton=new GroupButton(this.numberPanel,this.operatorPanel,this.functionPanel);
 	}
 	
 	// init Screen Component
