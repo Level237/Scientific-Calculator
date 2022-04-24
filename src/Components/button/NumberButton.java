@@ -7,10 +7,11 @@ import javax.swing.JButton;
 
 public class NumberButton extends JButton{
 
-	public NumberButton() {
+	public NumberButton(String number) {
 		// TODO Auto-generated constructor stub
 		this.setBackground(Color.black);
 		this.setPreferredSize(new Dimension(40,30));
+		this.setText(number);
 		this.setForeground(Color.white);
 	}
 
