@@ -67,6 +67,8 @@ public class Calculator extends JFrame{
 		this.container.add(timePanel,BorderLayout.NORTH);
 	}
 	
+	
+	
 	void BackgroundColorInTheContainer() {
 		this.container.setBackground(Color.DARK_GRAY);
 	}
