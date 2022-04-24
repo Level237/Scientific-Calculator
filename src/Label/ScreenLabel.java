@@ -10,7 +10,11 @@ public class ScreenLabel extends JLabel {
 	public ScreenLabel() {
 		// TODO Auto-generated constructor stub
 		this.setText("0");
+		this.initPolice();
 		
+	}
+	public void initPolice() {
+		police=new Font("Arial black", Font.BOLD, 20);
 	}
 
 }
