@@ -6,5 +6,6 @@ public class ScreenPanel extends JPanel{
 
 	public ScreenPanel() {
 		
+		
 	}
 }
