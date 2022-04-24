@@ -6,6 +6,7 @@ public class ScreenLabel extends JLabel {
 
 	public ScreenLabel() {
 		// TODO Auto-generated constructor stub
+		this.setText("0");
 	}
 
 }
