@@ -29,8 +29,9 @@ public class Calculator extends JFrame{
 		screenPanel=new ScreenPanel();
 	}
 	
-	void insertScreenInAComponent() {
+	void initScreenInAComponent() {
 		screenPanel.add(screenLabel);
+		this.insertScreenComponentInTheContainer();
 	}
 	
 	void insertScreenComponentInTheContainer() {
