@@ -10,6 +10,7 @@ public class Calculator extends JFrame{
 		this.setAlwaysOnTop(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
+		this.setVisible(true);
 	}
 
 	public static void main(String[] args) {
