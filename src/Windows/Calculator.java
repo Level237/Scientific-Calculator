@@ -4,11 +4,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import Components.Label.ScreenLabel;
+import Components.Panel.ScreenPanel;
 
 public class Calculator extends JFrame{
 	
 	private JPanel container;
-	private ScreenLabel ScreenLabel;
+	private ScreenLabel screenLabel;
+	private ScreenPanel screenPanel;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
