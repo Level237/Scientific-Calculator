@@ -27,6 +27,7 @@ public class Calculator extends JFrame{
 		container=new JPanel();
 		screenLabel=new ScreenLabel();
 		screenPanel=new ScreenPanel();
+		this.insertScreenComponentInTheContainer();
 	}
 	
 	void initScreenInAComponent() {
