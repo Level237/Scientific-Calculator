@@ -12,6 +12,7 @@ public class ScreenLabel extends JLabel {
 		this.setText("0");
 		this.initPolice();
 		this.setFont(font);
+		this.setHorizontalAlignment(JLabel.RIGHT);
 		
 	}
 	public void initPolice() {
