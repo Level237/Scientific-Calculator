@@ -3,9 +3,12 @@ package Windows;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import Components.Label.ScreenLabel;
+
 public class Calculator extends JFrame{
 	
 	private JPanel container;
+	private ScreenLabel ScreenLabel;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
