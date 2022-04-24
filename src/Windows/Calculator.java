@@ -2,7 +2,9 @@ package Windows;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.GridLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -10,6 +12,7 @@ import Components.Label.ScreenLabel;
 import Components.Label.TimeLabel;
 import Components.Panel.*;
 import Components.button.List.GroupButton;
+import Layouts.Grid.GridLayoutForNumber;
 
 public class Calculator extends JFrame{
 	
@@ -22,6 +25,9 @@ public class Calculator extends JFrame{
 	private OperatorPanel operatorPanel;
 	private FonctionPanel functionPanel;
 	private GroupButton groupButton;
+	private GridLayoutForNumber gridNumber;
+	private GridLayoutForNumber gridNumber1;
+	private GridLayoutForNumber gridNumber2;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
@@ -48,23 +54,35 @@ public class Calculator extends JFrame{
 		timePanel=new TimePanel();
 		this.initTimeInAComponent();
 		this.initNumberComponent();
+		this.initFunctionComponent();
+		this.initOperatorComponent();
 		this.initComponentGroupButton();
+		
 		
 	}
 	
 	void initNumberComponent() {
 		this.numberPanel=new NumberPanel();
+		GridLayout g1 = new GridLayout(4, 3);
+		g1.setHgap(5);
+		g1.setVgap(5);
+		numberPanel.setLayout(g1);
+		this.container.add(numberPanel,BorderLayout.CENTER);
+		
 	}
 	void initOperatorComponent(){
 		this.operatorPanel=new OperatorPanel();
+		
+		
 	}
 	
-	void initFunctionOperator() {
+	void initFunctionComponent() {
 		this.functionPanel=new FonctionPanel();
 	}
 	
 	void initComponentGroupButton() {
 		this.groupButton=new GroupButton(this.numberPanel,this.operatorPanel,this.functionPanel);
+		
 	}
 	
 	// init Screen Component

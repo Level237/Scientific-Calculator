@@ -16,16 +16,18 @@ public class GroupButton{
 	private NumberPanel numberPanel=new NumberPanel();
 	private OperatorPanel operatorPanel= new OperatorPanel();
 	private FonctionPanel functionPanel= new FonctionPanel();
-	private GridLayoutForNumber gridNumber;
+	
 		
 	public GroupButton(NumberPanel numberPanel,OperatorPanel operatorpanel,FonctionPanel functionPanel) {
 		// TODO Auto-generated constructor stub
 		this.numberPanel= numberPanel;
 		this.operatorPanel= operatorpanel;
 		this.functionPanel= functionPanel;
-		this.gridNumber=new GridLayoutForNumber(4,3);
-		numberPanel.setLayout(gridNumber);
+		this.initGroupButton();
+		
 	}
+	
+
 	
 	void initGroupButton() {
 		for(int i=0;i<groupButton.length;i++) {

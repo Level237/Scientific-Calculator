@@ -8,7 +8,7 @@ public class NumberPanel extends JPanel{
 
 	public NumberPanel() {
 		// TODO Auto-generated constructor stub
-		this.setPreferredSize(new Dimension(90, 350));
+		this.setPreferredSize(new Dimension(160, 210));
 	}
 
 }
