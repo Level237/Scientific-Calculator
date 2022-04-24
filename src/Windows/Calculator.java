@@ -42,6 +42,7 @@ public class Calculator extends JFrame{
 		//construct component time
 		timeLabel=new TimeLabel();
 		timePanel=new TimePanel();
+		this.initTimeInAComponent();
 		
 	}
 	
@@ -63,7 +64,7 @@ public class Calculator extends JFrame{
 	}
 	
 	void insertTimeComponentInTheContainer() {
-		this.container.add(timePanel);
+		this.container.add(timePanel,BorderLayout.NORTH);
 	}
 	
 	void BackgroundColorInTheContainer() {
