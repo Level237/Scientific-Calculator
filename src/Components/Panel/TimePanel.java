@@ -13,6 +13,7 @@ public class TimePanel extends JPanel{
 		this.setBackground(Color.yellow);
 		this.setPreferredSize(new Dimension(90,45));
 		this.setBorder(BorderFactory.createLineBorder(Color.black));
+		this.setAlignmentX(RIGHT_ALIGNMENT);
 	}
 
 }
