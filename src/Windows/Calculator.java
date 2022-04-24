@@ -1,6 +1,7 @@
 package Windows;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -27,9 +28,10 @@ public class Calculator extends JFrame{
 	
 	void initComponent(){
 		container=new JPanel();
+		this.BackgroundColorInTheContainer();
 		screenLabel=new ScreenLabel();
 		screenPanel=new ScreenPanel();
-		this.insertScreenComponentInTheContainer();
+		this.initScreenInAComponent();
 	}
 	
 	void initScreenInAComponent() {
@@ -39,6 +41,10 @@ public class Calculator extends JFrame{
 	
 	void insertScreenComponentInTheContainer() {
 		this.container.add(screenPanel,BorderLayout.NORTH);
+	}
+	
+	void BackgroundColorInTheContainer() {
+		this.container.setBackground(Color.DARK_GRAY);
 	}
 	
 	
