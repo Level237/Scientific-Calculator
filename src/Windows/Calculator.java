@@ -7,13 +7,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import Components.Label.ScreenLabel;
+import Components.Label.TimeLabel;
 import Components.Panel.ScreenPanel;
+import Components.Panel.TimePanel;
 
 public class Calculator extends JFrame{
 	
 	private JPanel container;
 	private ScreenLabel screenLabel;
 	private ScreenPanel screenPanel;
+	private TimePanel timePanel;
+	private TimeLabel timeLabel;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
@@ -34,7 +38,7 @@ public class Calculator extends JFrame{
 		this.initScreenInAComponent();
 	}
 	
-	// init Screen
+	// init Screen Component
 	void initScreenInAComponent() {
 		screenPanel.add(screenLabel);
 		this.insertScreenComponentInTheContainer();
