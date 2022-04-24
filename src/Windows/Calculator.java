@@ -61,6 +61,10 @@ public class Calculator extends JFrame{
 		
 	}
 	
+	void insertTimeComponentInTheContainer() {
+		this.container.add(timePanel);
+	}
+	
 	void BackgroundColorInTheContainer() {
 		this.container.setBackground(Color.DARK_GRAY);
 	}
