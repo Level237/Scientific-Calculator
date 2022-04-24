@@ -1,5 +1,6 @@
 package Label;
 
+import java.awt.Dimension;
 import java.awt.Font;
 
 import javax.swing.JLabel;
@@ -13,6 +14,7 @@ public class ScreenLabel extends JLabel {
 		this.initPolice();
 		this.setFont(font);
 		this.setHorizontalAlignment(JLabel.RIGHT);
+		this.setPreferredSize(new Dimension(280,45));
 		
 	}
 	public void initPolice() {
