@@ -54,11 +54,12 @@ public class Calculator extends JFrame{
 	void insertScreenComponentInTheContainer() {
 		this.container.add(screenPanel,BorderLayout.NORTH);
 	}
+	
 	// init Time Component
 	
 	void initTimeInAComponent() {
 		timePanel.add(timeLabel);
-		
+		this.insertTimeComponentInTheContainer();
 	}
 	
 	void insertTimeComponentInTheContainer() {
