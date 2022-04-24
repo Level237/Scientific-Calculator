@@ -1,8 +1,11 @@
 package Windows;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Calculator extends JFrame{
+	
+	private JPanel container;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
