@@ -1,5 +1,7 @@
 package Panel;
 
-public class ScreenPanel {
+import javax.swing.JPanel;
+
+public class ScreenPanel extends JPanel{
 
 }
