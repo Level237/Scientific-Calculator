@@ -33,9 +33,16 @@ public class Calculator extends JFrame{
 	void initComponent(){
 		container=new JPanel();
 		this.BackgroundColorInTheContainer();
+		
+		// construct component screer
 		screenLabel=new ScreenLabel();
 		screenPanel=new ScreenPanel();
 		this.initScreenInAComponent();
+		
+		//construct component time
+		timeLabel=new TimeLabel();
+		timePanel=new TimePanel();
+		
 	}
 	
 	// init Screen Component
@@ -46,6 +53,12 @@ public class Calculator extends JFrame{
 	
 	void insertScreenComponentInTheContainer() {
 		this.container.add(screenPanel,BorderLayout.NORTH);
+	}
+	// init Time Component
+	
+	void initTimeInAComponent() {
+		timePanel.add(timeLabel);
+		
 	}
 	
 	void BackgroundColorInTheContainer() {
