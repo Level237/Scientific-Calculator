@@ -7,6 +7,7 @@ public class Calculator extends JFrame{
 	public Calculator() {
 		this.setTitle("Calculator");
 		this.setSize(300,440);
+		this.setAlwaysOnTop(true);
 	}
 
 	public static void main(String[] args) {
