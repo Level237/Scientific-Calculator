@@ -113,7 +113,7 @@ public class GroupButton{
 		case 22:
 		
 			functionPanel.add(groupButton[i]);
-			groupButton[i].setPreferredSize(new Dimension(40, 30));
+			groupButton[i].setPreferredSize(new Dimension(90, 30));
 			
 			break;
 		case 23:

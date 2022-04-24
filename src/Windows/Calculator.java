@@ -2,6 +2,7 @@ package Windows;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -53,9 +54,11 @@ public class Calculator extends JFrame{
 		timeLabel=new TimeLabel();
 		timePanel=new TimePanel();
 		this.initTimeInAComponent();
-		this.initNumberComponent();
 		this.initFunctionComponent();
+		this.initNumberComponent();
 		this.initOperatorComponent();
+		
+		
 		this.initComponentGroupButton();
 		
 		
@@ -67,17 +70,27 @@ public class Calculator extends JFrame{
 		g1.setHgap(5);
 		g1.setVgap(5);
 		numberPanel.setLayout(g1);
+		this.numberPanel.setBackground(Color.DARK_GRAY);
 		this.container.add(numberPanel,BorderLayout.CENTER);
 		
 	}
 	void initOperatorComponent(){
 		this.operatorPanel=new OperatorPanel();
-		
+		this.operatorPanel.setPreferredSize(new Dimension(100, 200));
+		GridLayout g2 = new GridLayout(3, 2);
+		g2.setHgap(5);
+		g2.setVgap(5);
+		this.operatorPanel.setLayout(g2);
+		this.operatorPanel.setBackground(Color.DARK_GRAY);
+		this.container.add(operatorPanel,BorderLayout.EAST);
 		
 	}
 	
 	void initFunctionComponent() {
 		this.functionPanel=new FonctionPanel();
+		GridLayout g3 = new GridLayout(3, 3);
+		this.functionPanel.setLayout(g3);
+		this.container.add(functionPanel);
 	}
 	
 	void initComponentGroupButton() {

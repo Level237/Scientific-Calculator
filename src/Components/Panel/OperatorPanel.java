@@ -8,7 +8,7 @@ public class OperatorPanel extends JPanel{
 
 	public OperatorPanel() {
 		// TODO Auto-generated constructor stub
-		this.setPreferredSize(new Dimension(100, 190));
+		this.setPreferredSize(new Dimension(90, 190));
 	}
 
 }
