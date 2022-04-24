@@ -1,5 +1,7 @@
 package Windows;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -28,6 +30,11 @@ public class Calculator extends JFrame{
 	}
 	
 	void insertScreenInAComponent() {
+		screenPanel.add(screenLabel);
+	}
+	
+	void insertScreenComponentInTheContainer() {
+		this.container.add(screenPanel,BorderLayout.NORTH);
 	}
 	
 	
