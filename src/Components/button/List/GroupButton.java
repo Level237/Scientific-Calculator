@@ -1,6 +1,6 @@
 package Components.button.List;
 
-import Components.Panel.NumberPanel;
+import Components.Panel.*;
 import Components.button.NumberButton;
 import java.awt.Dimension;
 
@@ -11,10 +11,14 @@ public class GroupButton{
 			"Cos", "Sin", "Tan", "Ln", "exp", "off", "e", "racine","C"};
 	private NumberButton[] groupButton=new NumberButton[symbol.length];
 	private NumberPanel numberPanel;
-	
+	private OperatorPanel operatorPanel;
+	private FonctionPanel functionPanel;
+		
 	public GroupButton() {
 		// TODO Auto-generated constructor stub
 		this.numberPanel=new NumberPanel();
+		this.operatorPanel=new OperatorPanel();
+		this.functionPanel=new FonctionPanel();
 	}
 	
 	void initGroupButton() {
@@ -37,20 +41,20 @@ public class GroupButton{
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
 			break;
 		case 11:
-			operateur.add(groupButton[i]);
+			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
 
 			break;
 		case 12:
 			groupButton[i].addActionListener(new EgalListener());
-			operateur.add(groupButton[i]);
+			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim2);
 
 			break;
 			
 		case 13:
 			groupButton[i].addActionListener(new Moins1Listener());
-			operateur.add(groupButton[i]);
+			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim2);
 			groupButton[i].setForeground(Color.white);
 			groupButton[i].setBackground(Color.black);
@@ -60,22 +64,22 @@ public class GroupButton{
 
 			groupButton[i].addActionListener(new PlusListener());
 
-			operateur.add(groupButton[i]);
+			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim2);
 			break;
 		case 15:
 			groupButton[i].addActionListener(new MoinsListener());
-			operateur.add(groupButton[i]);
+			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim2);
 			break;
 		case 16:
 			groupButton[i].addActionListener(new MultiListener());
-			operateur.add(groupButton[i]);
+			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim2);
 			break;
 		case 17:
 			groupButton[i].addActionListener(new PiListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 
 			groupButton[i].setBackground(Color.white);
@@ -83,56 +87,56 @@ public class GroupButton{
 			break;
 		case 18:
 			groupButton[i].addActionListener(new CosListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
 			break;
 		case 19:
 			groupButton[i].addActionListener(new SinusListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
 			break;
 		case 20:
 			groupButton[i].addActionListener(new TanListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
 			break;
 		case 21:
 			groupButton[i].addActionListener(new LogListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
 			break;
 		case 22:
 			groupButton[i].addActionListener(new ExposantListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
 			break;
 		case 23:
 			groupButton[i].addActionListener(new OffListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.red);
 			groupButton[i].setForeground(Color.white);
 			break;
 		case 24:
 			groupButton[i].addActionListener(new ExponentielListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
 			break;
 		case 25:
 			groupButton[i].addActionListener(new RacineListener());
-			fonction.add(groupButton[i]);
+			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(dim3);
 			groupButton[i].setBackground(Color.white);
 			groupButton[i].setForeground(Color.black);
