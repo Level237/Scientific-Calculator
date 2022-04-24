@@ -21,6 +21,12 @@ public class Calculator extends JFrame{
 		this.setVisible(true);
 	}
 	
+	void initComponent(){
+		container=new JPanel();
+		screenLabel=new ScreenLabel();
+		screenPanel=new ScreenPanel();
+	}
+	
 	
 
 	public static void main(String[] args) {
