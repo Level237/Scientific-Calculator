@@ -21,6 +21,7 @@ public class Calculator extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.initComponent();
+		this.setContentPane(container);
 		this.setVisible(true);
 	}
 	
