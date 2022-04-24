@@ -12,15 +12,15 @@ public class GroupButton{
 	private String[] symbol={ "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "/", "=", "-.", "+", "-", "x", "Pi",
 			"Cos", "Sin", "Tan", "Ln", "exp", "off", "e", "racine","C"};
 	private NumberButton[] groupButton=new NumberButton[symbol.length];
-	private NumberPanel numberPanel;
-	private OperatorPanel operatorPanel;
-	private FonctionPanel functionPanel;
+	private NumberPanel numberPanel=new NumberPanel();
+	private OperatorPanel operatorPanel= new OperatorPanel();
+	private FonctionPanel functionPanel= new FonctionPanel();
 		
-	public GroupButton() {
+	public GroupButton(NumberPanel numberPanel,OperatorPanel operatorpanel,FonctionPanel functionPanel) {
 		// TODO Auto-generated constructor stub
-		this.numberPanel=new NumberPanel();
-		this.operatorPanel=new OperatorPanel();
-		this.functionPanel=new FonctionPanel();
+		this.numberPanel= numberPanel;
+		this.operatorPanel= operatorpanel;
+		this.functionPanel= functionPanel;
 	}
 	
 	void initGroupButton() {

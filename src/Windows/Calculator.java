@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 
 import Components.Label.ScreenLabel;
 import Components.Label.TimeLabel;
-import Components.Panel.ScreenPanel;
-import Components.Panel.TimePanel;
+import Components.Panel.*;
+import Components.button.List.GroupButton;
 
 public class Calculator extends JFrame{
 	
@@ -18,6 +18,10 @@ public class Calculator extends JFrame{
 	private ScreenPanel screenPanel;
 	private TimePanel timePanel;
 	private TimeLabel timeLabel;
+	private NumberPanel numberPanel;
+	private OperatorPanel operatorPanel;
+	private FonctionPanel functionPanel;
+	private GroupButton grouButton;
 	
 	public Calculator() {
 		this.setTitle("Calculator");
