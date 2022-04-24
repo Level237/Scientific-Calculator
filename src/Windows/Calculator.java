@@ -8,6 +8,8 @@ public class Calculator extends JFrame{
 		this.setTitle("Calculator");
 		this.setSize(300,440);
 		this.setAlwaysOnTop(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
 	}
 
 	public static void main(String[] args) {
