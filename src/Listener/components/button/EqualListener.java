@@ -15,6 +15,14 @@ public class EqualListener  extends ListenerButtonImplement implements ActionLis
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		if(this.isNumber) {
+			operator.calculate("=");
+			this.isclickOnExponent=true;
+			  this.isUpdate=true;
+				this.isUpdate1 = true;
+			this.isclickOnOperator = false;
+		}
+		this.isclickOnDash=false;
 		
 	}
 
