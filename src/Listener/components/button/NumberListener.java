@@ -9,13 +9,12 @@ import javax.swing.JButton;
 import Components.Label.ScreenLabel;
 import Components.button.NumberButton;
 
-public class NumberListener implements ActionListener{
+public class NumberListener implements ActionListener,ListenerButtonImplement{
 	
 	private ScreenLabel screen;
 	
 	public NumberListener(ScreenLabel screen) {
 		this.screen=screen;
-		
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
