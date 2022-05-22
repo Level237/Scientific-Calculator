@@ -15,5 +15,7 @@ package Listener.components.button;
 	 boolean isclickOntangente=false;
 	 boolean isclickOnLog=false;
 	 boolean isclickOnDash=false;
+	 double result=0;
+	 double number=0;
 	 
 }
