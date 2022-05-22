@@ -6,6 +6,7 @@ package Listener.components.button;
 	 boolean isUpdate1 = false;
 	 boolean isUpdate2=false;
 	 boolean isclickOnOperator=false;
+	 boolean isNumber=false;
 	 boolean isclickOnSubstract=false;
 	 boolean isclickOnExponential=false;
 	 boolean isclickOnExponent=false;
