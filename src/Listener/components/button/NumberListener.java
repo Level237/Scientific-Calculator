@@ -22,6 +22,8 @@ public class NumberListener implements ActionListener{
 		// TODO Auto-generated method stub
 		String screenListener=((JButton) e.getSource()).getText();
 			this.screen.setForeground(Color.black);
+			this.screen.setText(screenListener);
+			
 	}
 
 }
