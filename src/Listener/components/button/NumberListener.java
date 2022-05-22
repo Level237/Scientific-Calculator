@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import Components.Label.ScreenLabel;
 import Components.button.NumberButton;
 
-public class NumberListener implements ActionListener,ListenerButtonImplement{
+public class NumberListener extends ListenerButtonImplement implements ActionListener {
 	
 	private ScreenLabel screen;
 	
@@ -22,6 +22,13 @@ public class NumberListener implements ActionListener,ListenerButtonImplement{
 		String screenListener=((JButton) e.getSource()).getText();
 			this.screen.setForeground(Color.black);
 			this.screen.setText(screenListener);
+			
+			if(this.isUpdate) {
+				this.isUpdate=false;
+			}
+			else {
+				
+			}
 			
 	}
 

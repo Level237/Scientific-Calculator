@@ -1,6 +1,6 @@
 package Listener.components.button;
 
-public interface ListenerButtonImplement{
+  abstract class  ListenerButtonImplement{
 	
 	 boolean isUpdate = false;
 	 boolean isclickOnOperator=false;
