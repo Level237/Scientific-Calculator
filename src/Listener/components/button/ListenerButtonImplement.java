@@ -3,6 +3,8 @@ package Listener.components.button;
   abstract class  ListenerButtonImplement{
 	
 	 boolean isUpdate = false;
+	 boolean isUpdate1 = false;
+	 boolean isUpdate2=false;
 	 boolean isclickOnOperator=false;
 	 boolean isclickOnSubstract=false;
 	 boolean isclickOnExponential=false;

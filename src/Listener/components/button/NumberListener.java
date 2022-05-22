@@ -32,7 +32,13 @@ public class NumberListener extends ListenerButtonImplement implements ActionLis
 			}
 				this.screen.setText(screenListener);
 			}
-			
+			if(this.isUpdate1==true) {
+				this.screen.setText(screenListener);
+				this.isUpdate2=true;
+			}
+		this.isclickOnDash=true;
+		
+			}
 	}
 
-}
+
