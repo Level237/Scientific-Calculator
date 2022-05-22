@@ -1,8 +1,10 @@
 package Components.button.List;
 
+import Components.Label.ScreenLabel;
 import Components.Panel.*;
 import Components.button.NumberButton;
 import Layouts.Grid.GridLayoutForNumber;
+import Listener.components.button.NumberListener;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -16,10 +18,11 @@ public class GroupButton{
 	private NumberPanel numberPanel=new NumberPanel();
 	private OperatorPanel operatorPanel= new OperatorPanel();
 	private FonctionPanel functionPanel= new FonctionPanel();
-	
+	private ScreenLabel screen;
 		
-	public GroupButton(NumberPanel numberPanel,OperatorPanel operatorpanel,FonctionPanel functionPanel) {
+	public GroupButton(NumberPanel numberPanel,OperatorPanel operatorpanel,FonctionPanel functionPanel,ScreenLabel screen) {
 		// TODO Auto-generated constructor stub
+		this.screen=screen;
 		this.numberPanel= numberPanel;
 		this.operatorPanel= operatorpanel;
 		this.functionPanel= functionPanel;
@@ -41,6 +44,7 @@ public class GroupButton{
 	void listButton(int i) {
 		
 		groupButton[i]=new NumberButton(symbol[i]);
+		groupButton[i].addActionListener(new NumberListener(this.screen));
 		
 		switch (i) {
 		case 10:

@@ -94,7 +94,7 @@ public class Calculator extends JFrame{
 	}
 	
 	void initComponentGroupButton() {
-		this.groupButton=new GroupButton(this.numberPanel,this.operatorPanel,this.functionPanel);
+		this.groupButton=new GroupButton(this.numberPanel,this.operatorPanel,this.functionPanel,this.screenLabel);
 		
 	}
 	
