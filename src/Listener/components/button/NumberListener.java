@@ -21,13 +21,16 @@ public class NumberListener extends ListenerButtonImplement implements ActionLis
 		// TODO Auto-generated method stub
 		String screenListener=((JButton) e.getSource()).getText();
 			this.screen.setForeground(Color.black);
-			this.screen.setText(screenListener);
 			
 			if(this.isUpdate) {
 				this.isUpdate=false;
 			}
 			else {
-				
+				if (!this.screen.getText().equals("0") && (!this.screen.getText().equals("SYNTAX ERROR")) ) {
+					screenListener = this.screen.getText() + screenListener;
+					
+			}
+				this.screen.setText(screenListener);
 			}
 			
 	}
