@@ -16,7 +16,7 @@ public class OperatorArithmetic extends ListenerButtonImplement{
 		int i=0;
 		if(this.Operator.equals("+")) {
 			this.result = this.number +
-					Double.valueOf(ecran.getText()).doubleValue();
+					Double.valueOf(this.screen.getText()).doubleValue();
 		}
 	}
 }
