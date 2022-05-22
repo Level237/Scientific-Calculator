@@ -1,9 +1,12 @@
 package Listener.components.button;
 
-public class AdditionListener {
+import Components.Label.ScreenLabel;
 
-	public AdditionListener() {
+public class AdditionListener {
+	private ScreenLabel screen;
+	public AdditionListener(ScreenLabel screen	) {
 		// TODO Auto-generated constructor stub
+		this.screen=screen;
 	}
 
 }
