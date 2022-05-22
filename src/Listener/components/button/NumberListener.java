@@ -1,5 +1,14 @@
 package Listener.components.button;
 
-public class NumberListener {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class NumberListener implements ActionListener{
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+			
+	}
 
 }
