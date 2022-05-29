@@ -339,4 +339,25 @@ i=(int)result;
 				
 			}
 	 }
+	 class Listener implements ActionListener{
+		 @Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String str="-";
+				
+					if(isclickOnSubstract==true) {
+						screen.setText(str+screen.getText());
+					}
+				if(screen.getText().contains("-")) {
+					screen.setText(screen.getText().replace("-",""));
+				
+				}
+				else {
+					screen.setText(str+screen.getText());
+				}
+				
+				
+				
+			}
+	 }
 }
