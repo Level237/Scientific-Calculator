@@ -178,6 +178,21 @@ public class GroupButton{
 		}
 	}
 	
+	void calculate() {
+		int i=0;
+		if(this.Operator.equals("+")) {
+			this.result = this.number +
+					Double.valueOf(this.screen.getText()).doubleValue();
+		}
+		else {
+			this.screen.setText(String.valueOf(this.result));
+			this.isNumber=true;
+		}
+	}
+	void setOperator(String Operator) {
+		this.Operator=Operator;
+	}
+	
 	class NumberListener implements ActionListener{
 		
 		
@@ -231,5 +246,21 @@ public class GroupButton{
 		
 	}
 	
-
+	 class EqualListener implements ActionListener{
+		 @Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if(isNumber==false) {
+					Operator="=";
+					calculate();
+					isclickOnExponent=true;
+					  isUpdate=true;
+						isUpdate1 = true;
+					isclickOnOperator = false;
+					
+				}
+				isclickOnDash=false;
+				
+			}
+	 }
 }
