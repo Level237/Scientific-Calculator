@@ -10,10 +10,10 @@ public class OperatorArithmetic extends ListenerButtonImplement{
 		// TODO Auto-generated constructor stub
 		this.Operator=OperatorType;
 		this.screen=screen;
-		this.calculate(this.Operator);
+		
 	}
 	
-	void calculate(String Operator) {
+	void calculate() {
 		int i=0;
 		if(this.Operator.equals("+")) {
 			this.result = this.number +

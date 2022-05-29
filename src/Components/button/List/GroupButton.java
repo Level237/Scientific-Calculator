@@ -4,7 +4,9 @@ import Components.Label.ScreenLabel;
 import Components.Panel.*;
 import Components.button.NumberButton;
 import Layouts.Grid.GridLayoutForNumber;
+import Listener.components.button.AdditionListener;
 import Listener.components.button.NumberListener;
+import Listener.components.button.OperatorArithmetic;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -44,7 +46,7 @@ public class GroupButton{
 	void listButton(int i) {
 		
 		groupButton[i]=new NumberButton(symbol[i]);
-		groupButton[i].addActionListener(new NumberListener(this.screen));
+	
 		
 		switch (i) {
 		case 10:
@@ -75,6 +77,7 @@ public class GroupButton{
 
 			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
+			groupButton[i].addActionListener(new AdditionListener(this.screen,new OperatorArithmetic("+",this.screen)));
 			break;
 		case 15:
 			operatorPanel.add(groupButton[i]);
@@ -147,7 +150,7 @@ public class GroupButton{
 			break;
 		default:
 			this.numberPanel.add(groupButton[i]);
-			
+			groupButton[i].addActionListener(new NumberListener(this.screen));
 			break;
 		}
 	}

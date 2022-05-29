@@ -8,12 +8,14 @@ import Components.Label.ScreenLabel;
 public class AdditionListener extends ListenerButtonImplement implements ActionListener{
 	private ScreenLabel screen;
 	private OperatorArithmetic operator;
-	public AdditionListener(ScreenLabel screen	) {
+	public AdditionListener(ScreenLabel screen,OperatorArithmetic operator) {
 		// TODO Auto-generated constructor stub
 		this.screen=screen;
+		this.operator=operator;
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		// TODO Auto-generated method stub
 		if(this.isclickOnOperator) {
 			this.screen.setText(String.valueOf(this.result));

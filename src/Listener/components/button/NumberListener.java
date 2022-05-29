@@ -30,8 +30,9 @@ public class NumberListener extends ListenerButtonImplement implements ActionLis
 					screenListener = this.screen.getText() + screenListener;
 					
 			}
-				this.screen.setText(screenListener);
+				
 			}
+			this.screen.setText(screenListener);
 			if(this.isUpdate1==true) {
 				this.screen.setText(screenListener);
 				this.isUpdate2=true;
