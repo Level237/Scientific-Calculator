@@ -63,9 +63,15 @@ public class ArithmeticListener extends ListenerButtonImplement{
 						}
 				}
 			
-			class AdditionListener {
-				
-			}
+				public class AdditionListener implements ActionListener{
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						// TODO Auto-generated method stub
+						
+					}
+					
+				}
 	}
 
 
