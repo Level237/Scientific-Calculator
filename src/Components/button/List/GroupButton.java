@@ -183,6 +183,7 @@ public class GroupButton{
 		if(this.Operator.equals("+")) {
 			this.result = this.number +
 					Double.valueOf(this.screen.getText()).doubleValue();
+			i=(int)result;
 			if((String.valueOf(result)).contains(".0")) {
 				i=(int)result;
 								
@@ -263,10 +264,6 @@ i=(int)result;
 			} catch (ArithmeticException e) {
 				
 			}
-		}
-		else {
-			this.screen.setText(String.valueOf(this.result));
-			this.isNumber=true;
 		}
 	}
 	
