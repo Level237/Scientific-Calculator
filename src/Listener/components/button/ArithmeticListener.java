@@ -8,7 +8,7 @@ import javax.swing.JButton;
 
 import Components.Label.ScreenLabel;
 
-public class ArithmeticListener extends ListenerButtonImplement{
+public class ArithmeticListener{
 	private ScreenLabel screen;
 	 private boolean isUpdate = false;
 	 private boolean isUpdate1;

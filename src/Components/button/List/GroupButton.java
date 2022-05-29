@@ -5,12 +5,16 @@ import Components.Panel.*;
 import Components.button.NumberButton;
 import Layouts.Grid.GridLayoutForNumber;
 import Listener.components.button.AdditionListener;
-import Listener.components.button.ArithmeticListener;
+
 
 import Listener.components.button.OperatorArithmetic;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 
 public class GroupButton{
 
@@ -22,7 +26,24 @@ public class GroupButton{
 	private OperatorPanel operatorPanel= new OperatorPanel();
 	private FonctionPanel functionPanel= new FonctionPanel();
 	private ScreenLabel screen;
-		
+	 private boolean isUpdate = false;
+	 private boolean isUpdate1;
+	 boolean isUpdate2=false;
+	 boolean isclickOnOperator=false;
+	 boolean isNumber=false;
+	 boolean isclickOnSubstract=false;
+	 boolean isclickOnExponential=false;
+	 boolean isclickOnExponent=false;
+	 boolean isclickOnAddition=false;
+	 boolean isclickOnConsinus=false;
+	 boolean isclickOnSinus=false;
+	 boolean isclickOntangente=false;
+	 boolean isclickOnLog=false;
+	 boolean isclickOnDash=false;
+	 double result=0;
+	 double number=0;
+	 String Operator="";
+	
 	public GroupButton(NumberPanel numberPanel,OperatorPanel operatorpanel,FonctionPanel functionPanel,ScreenLabel screen) {
 		// TODO Auto-generated constructor stub
 		this.screen=screen;
@@ -30,6 +51,7 @@ public class GroupButton{
 		this.operatorPanel= operatorpanel;
 		this.functionPanel= functionPanel;
 		this.initGroupButton();
+		
 		
 	}
 	
@@ -78,7 +100,7 @@ public class GroupButton{
 
 			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
-			groupButton[i].addActionListener(new AdditionListener(this.screen,new OperatorArithmetic("+",this.screen)));
+			groupButton[i].addActionListener(new AdditionListener());
 			break;
 		case 15:
 			operatorPanel.add(groupButton[i]);
@@ -151,9 +173,63 @@ public class GroupButton{
 			break;
 		default:
 			this.numberPanel.add(groupButton[i]);
-			groupButton[i].addActionListener(new ArithmeticListener(this.screen).new NumberListener());
+			groupButton[i].addActionListener(new NumberListener());
 			break;
 		}
 	}
+	
+	class NumberListener implements ActionListener{
+		
+		
+		@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String screenListener=((JButton) e.getSource()).getText();
+				screen.setForeground(Color.black);
+				
+				if(isUpdate) {
+					isUpdate=false;
+				}
+				else {
+					if (! screen.getText().equals("0") && (!screen.getText().equals("SYNTAX ERROR")) ) {
+						screenListener = screen.getText() + screenListener;
+						
+				}
+					
+				}
+				screen.setText(screenListener);
+				System.out.println(isUpdate1);
+				if(isUpdate1==true) {
+					screen.setText(screenListener);
+					isUpdate2=true;
+				}
+			    	isclickOnDash=true;
+			
+				}
+		}
+	 class AdditionListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			if(isclickOnOperator) {
+				screen.setText(String.valueOf(result));
+			}
+			else {
+				number=Double.valueOf(screen.getText()).doubleValue();
+			}
+			
+			Operator="+";
+			
+			isUpdate=true;
+			isUpdate1=true;
+			System.out.println(isUpdate1);
+			isUpdate2=true;
+			isNumber=true;
+			isclickOnDash=true;
+		}
+		
+	}
+	
 
 }
