@@ -25,8 +25,10 @@ public class AdditionListener extends ListenerButtonImplement implements ActionL
 		}
 		
 		operator.setOperator("+");
-		this.isUpdate=true;
-		this.isUpdate1=true;
+		
+		//this.isUpdate=true;
+		this.setIsUpdate1(true);
+		System.out.println(this.getUpdate1());
 		this.isUpdate2=true;
 		this.isNumber=true;
 		this.isclickOnDash=true;

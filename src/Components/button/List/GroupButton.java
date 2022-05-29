@@ -5,7 +5,8 @@ import Components.Panel.*;
 import Components.button.NumberButton;
 import Layouts.Grid.GridLayoutForNumber;
 import Listener.components.button.AdditionListener;
-import Listener.components.button.NumberListener;
+import Listener.components.button.ArithmeticListener;
+
 import Listener.components.button.OperatorArithmetic;
 
 import java.awt.Color;
@@ -150,7 +151,7 @@ public class GroupButton{
 			break;
 		default:
 			this.numberPanel.add(groupButton[i]);
-			groupButton[i].addActionListener(new NumberListener(this.screen));
+			groupButton[i].addActionListener(new ArithmeticListener(this.screen).new NumberListener());
 			break;
 		}
 	}

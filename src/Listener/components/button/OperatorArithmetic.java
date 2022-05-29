@@ -6,6 +6,7 @@ public class OperatorArithmetic extends ListenerButtonImplement{
 
 	String Operator;
 	ScreenLabel screen;
+	
 	public OperatorArithmetic(String OperatorType,ScreenLabel screen) {
 		// TODO Auto-generated constructor stub
 		this.Operator=OperatorType;

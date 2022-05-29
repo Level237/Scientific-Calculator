@@ -101,7 +101,6 @@ public class Calculator extends JFrame{
 	// init Screen Component
 	void initScreenInAComponent() {
 		screenPanel.add(screenLabel);
-		
 		this.insertScreenComponentInTheContainer();
 	}
 	
