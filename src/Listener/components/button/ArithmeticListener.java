@@ -26,7 +26,7 @@ public class ArithmeticListener extends ListenerButtonImplement{
 	 boolean isclickOnDash=false;
 	 double result=0;
 	 double number=0;
-	
+	 String Operator="";
 	public ArithmeticListener(ScreenLabel screen) {
 		// TODO Auto-generated constructor stub
 		this.screen=screen;
@@ -68,7 +68,21 @@ public class ArithmeticListener extends ListenerButtonImplement{
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						// TODO Auto-generated method stub
+						if(isclickOnOperator) {
+							screen.setText(String.valueOf(result));
+						}
+						else {
+							number=Double.valueOf(screen.getText()).doubleValue();
+						}
 						
+						Operator="+";
+						
+						isUpdate=true;
+						isUpdate1=true;
+						System.out.println(isUpdate1);
+						isUpdate2=true;
+						isNumber=true;
+						isclickOnDash=true;
 					}
 					
 				}
