@@ -94,7 +94,7 @@ public class GroupButton{
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
 			groupButton[i].setForeground(Color.white);
 			groupButton[i].setBackground(Color.black);
-
+			groupButton[i].addActionListener(new PutSubstractListener());
 			break;
 		case 14:
 
@@ -105,6 +105,7 @@ public class GroupButton{
 		case 15:
 			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
+			groupButton[i].addActionListener(new SubstractListener());
 			break;
 		case 16:
 	
@@ -198,7 +199,7 @@ public class GroupButton{
 								this.screen.setText("Bad Syntaxe");
 							}
 		}
-		if (Operator.equals("-")) {
+		if (this.Operator.equals("-")) {
 					
 					result = this.number -
 							Double.valueOf(this.screen.getText()).doubleValue();
@@ -339,12 +340,12 @@ i=(int)result;
 				
 			}
 	 }
-	 class Listener implements ActionListener{
+	 class PutSubstractListener implements ActionListener{
 		 @Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				String str="-";
-				
+					System.out.println(isclickOnSubstract);
 					if(isclickOnSubstract==true) {
 						screen.setText(str+screen.getText());
 					}
@@ -359,5 +360,29 @@ i=(int)result;
 				
 				
 			}
+	 }
+	 class SubstractListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			String str=((JButton)e.getSource()).getText();
+			
+			if(isclickOnOperator) {
+							
+							screen.setText(String.valueOf(number));
+						}
+						else {
+							number=Double.valueOf(screen.getText()).doubleValue();
+							
+				}
+			isclickOnSubstract=true;
+			Operator="-";
+			isUpdate=true;
+			isUpdate1=true;
+			isNumber=false;
+			isclickOnDash=false;
+		}
+		 
 	 }
 }
