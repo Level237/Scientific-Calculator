@@ -85,7 +85,7 @@ public class GroupButton{
 		case 12:
 			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
-
+			this.groupButton[i].addActionListener(new EqualListener());
 			break;
 			
 		case 13:
@@ -183,15 +183,93 @@ public class GroupButton{
 		if(this.Operator.equals("+")) {
 			this.result = this.number +
 					Double.valueOf(this.screen.getText()).doubleValue();
+			if((String.valueOf(result)).contains(".0")) {
+				i=(int)result;
+								
+								this.screen.setText(String.valueOf(i));
+								this.isNumber=true;
+							}
+							else {
+								this.screen.setText(String.valueOf(result));
+								this.isNumber=true;
+							}
+							if((this.screen.getText().contains("Na"))) {
+								this.screen.setText("Bad Syntaxe");
+							}
+		}
+		if (Operator.equals("-")) {
+					
+					result = this.number -
+							Double.valueOf(this.screen.getText()).doubleValue();
+					
+					if((String.valueOf(result)).contains(".0")) {
+		i=(int)result;
+						
+						this.screen.setText(String.valueOf(i));
+						this.isNumber=true;
+					}
+					else {
+						this.screen.setText(String.valueOf(result));
+						this.isNumber=true;
+					}
+					if((this.screen.getText().contains("Na"))) {
+						this.screen.setText("Bad Syntaxe");
+					}
+				}
+		
+		if (Operator.equals("x")) {
+			result = this.number*
+					Double.valueOf(this.screen.getText()).doubleValue();
+			if((String.valueOf(result)).contains(".0")) {
+i=(int)result;
+				
+				this.screen.setText(String.valueOf(i));
+				this.isNumber=true;
+			}
+			else {
+				this.screen.setText(String.valueOf(result));
+				this.isNumber=true;
+			}
+			if((this.screen.getText().contains("Na"))) {
+				this.screen.setText("Bad Syntaxe");
+			}
+		}
+		
+		if (Operator.equals("/")) {
+			result = this.number
+ / Double.valueOf(this.screen.getText()).doubleValue();
+		
+		if((String.valueOf(result)).contains(".0")) {
+        i=(int)result;
+
+				
+				this.screen.setText(String.valueOf(i));
+				
+				this.isNumber=true;
+			}
+			else {
+				this.screen.setText(String.valueOf(result));
+				this.isNumber=true;
+			}
+		if((this.screen.getText().contains("Na"))) {
+			this.screen.setText("Bad Syntaxe");
+		}
+			try {
+				if(result==this.number/0) {
+					this.screen.setForeground(Color.red);
+					this.screen.setText("SYNTAX ERROR");
+				}
+				
+			} catch (ArithmeticException e) {
+				
+			}
 		}
 		else {
 			this.screen.setText(String.valueOf(this.result));
 			this.isNumber=true;
 		}
 	}
-	void setOperator(String Operator) {
-		this.Operator=Operator;
-	}
+	
 	
 	class NumberListener implements ActionListener{
 		
@@ -240,8 +318,8 @@ public class GroupButton{
 			isUpdate1=true;
 			System.out.println(isUpdate1);
 			isUpdate2=true;
-			isNumber=true;
-			isclickOnDash=true;
+			isNumber=false;
+			isclickOnDash=false;
 		}
 		
 	}
@@ -250,8 +328,9 @@ public class GroupButton{
 		 @Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+			 System.out.println(isNumber);
 				if(isNumber==false) {
-					Operator="=";
+					
 					calculate();
 					isclickOnExponent=true;
 					  isUpdate=true;
