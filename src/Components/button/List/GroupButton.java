@@ -162,7 +162,7 @@ public class GroupButton{
 			break;
 		case 24:
 			
-			functionPanel.add(groupButton[i]);
+			functionPanel.add(groupButton[i]); 	 	 
 			groupButton[i].setPreferredSize(new Dimension(40, 30));
 			
 			break;
@@ -584,5 +584,24 @@ i=(int)result;
 			}
 	    	
 	    }
+	 class ExposantListener implements ActionListener{
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				if(isclickOnOperator) {
+					screen.setText(String.valueOf(result));
+				}
+				else {
+					number=Double.valueOf(screen.getText()).doubleValue();
+				}
+				
+				isclickOnExponent=false;
+				isUpdate=true;
+				isNumber=false;
+				
+			}
+			   
+		   }
 
 }
