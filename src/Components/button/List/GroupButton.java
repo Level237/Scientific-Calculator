@@ -385,4 +385,15 @@ i=(int)result;
 		}
 		 
 	 }
+	 class MultiListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+				if(isclickOnOperator) {
+					screen.setText(String.valueOf(result));
+				}
+		}
+		 
+	 }
 }
