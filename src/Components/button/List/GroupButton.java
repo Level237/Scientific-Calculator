@@ -392,7 +392,6 @@ i=(int)result;
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			System.out.println(isclickOnOperator);
 				if(isclickOnOperator) {
 					screen.setText(String.valueOf(result));
 				}
@@ -408,4 +407,24 @@ i=(int)result;
 		}
 		 
 	 }
+	 class DivListener implements ActionListener{
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				if(isclickOnOperator) {
+					
+					screen.setText(String.valueOf(result));
+				}
+				else {
+					number=Double.valueOf(screen.getText()).doubleValue();
+				}
+				Operator="/";
+				isUpdate=true;
+				isUpdate1=true;
+				isNumber=false;
+				isclickOnDash=false;
+			}
+			
+		}
 }
