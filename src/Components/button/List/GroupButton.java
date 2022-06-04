@@ -76,6 +76,7 @@ public class GroupButton{
 			
 			numberPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
+			this.groupButton[i].addActionListener(new CommaListener());
 			break;
 		case 11:
 			operatorPanel.add(groupButton[i]);
@@ -426,4 +427,20 @@ i=(int)result;
 			}
 			
 		}
+	 
+	 class CommaListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			String str=".";
+			if(isclickOnDash==false && isUpdate==false) {
+				screen.setText(screen.getText()+str);
+				isclickOnDash=true;
+				
+				
+			}
+		}
+		 
+	 }
 }
