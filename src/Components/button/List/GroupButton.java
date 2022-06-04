@@ -149,7 +149,7 @@ public class GroupButton{
 			groupButton[i].addActionListener(new LogListener());
 			break;
 		case 22:
-		
+			groupButton[i].addActionListener(new ExposantListener());
 			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(90, 30));
 			
@@ -272,6 +272,27 @@ i=(int)result;
 			} catch (ArithmeticException e) {
 				
 			}
+			
+			}
+		if(isclickOnExponent==true && isUpdate==true && isUpdate1==true ) {
+			
+			result=Math.pow(number, Double.valueOf(screen.getText()).doubleValue());
+			if((String.valueOf(result)).contains(".0")) {
+				i=(int)result;
+								
+								screen.setText(String.valueOf(i));
+								isclickOnExponent=true;
+								isUpdate=false;
+								isUpdate1=false;
+								isNumber=true;
+							}
+							else {
+								screen.setText(String.valueOf(result));
+								isclickOnExponent=true;
+								isUpdate=false;
+								isUpdate1=false;
+								isNumber=true;
+							}	
 		}
 	}
 	
