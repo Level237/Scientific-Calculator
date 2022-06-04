@@ -118,6 +118,8 @@ public class GroupButton{
 			
 			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(40, 30));
+			groupButton[i].addActionListener(new PiListener());
+			
 			break;
 		case 18:
 			
@@ -443,4 +445,14 @@ i=(int)result;
 		}
 		 
 	 }
+	 class PiListener implements ActionListener{
+		    
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				screen.setText(String.valueOf(Math.PI));
+			}
+	    	
+	    }
 }
