@@ -132,6 +132,8 @@ public class GroupButton{
 			
 			functionPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(40, 30));
+			groupButton[i].addActionListener(new SinusListener());
+			
 		
 			break;
 		case 20:
