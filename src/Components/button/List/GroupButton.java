@@ -393,6 +393,15 @@ i=(int)result;
 				if(isclickOnOperator) {
 					screen.setText(String.valueOf(result));
 				}
+				else {
+					number=Double.valueOf(screen.getText()).doubleValue();
+					
+				}
+				Operator="x";
+				isUpdate=true;
+				isUpdate1=true;
+				isNumber=false;
+				isclickOnDash=false;
 		}
 		 
 	 }
