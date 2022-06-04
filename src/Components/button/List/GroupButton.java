@@ -474,9 +474,34 @@ i=(int)result;
 									screen.setText(String.valueOf(result));
 									isUpdate=true;
 								}
-				
-				
 				}
 				
 			}
+	 class SinusListener implements ActionListener{
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+				int i=0;
+				result=Math.sin(Double.valueOf(screen.getText()));
+				if((String.valueOf(result)).contains(".0")) {
+					i=(int)result;
+									
+									screen.setText(String.valueOf(i));
+									isUpdate=true;
+								}
+								else {
+									screen.setText(String.valueOf(result));
+									isUpdate=true;
+								}	
+				if((String.valueOf(result)).contains("-Inf")) {
+					screen.setForeground(Color.red);
+					screen.setText(String.valueOf("SYNTAX ERROR"));
+					
+	                
+	}
+			}
+ 		
+ 	}
 }
