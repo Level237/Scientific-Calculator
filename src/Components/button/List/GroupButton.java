@@ -80,7 +80,7 @@ public class GroupButton{
 		case 11:
 			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
-
+			this.groupButton[i].addActionListener(new DivListener());
 			break;
 		case 12:
 			operatorPanel.add(groupButton[i]);
@@ -423,7 +423,6 @@ i=(int)result;
 				isUpdate=true;
 				isUpdate1=true;
 				isNumber=false;
-				isclickOnDash=false;
 			}
 			
 		}
