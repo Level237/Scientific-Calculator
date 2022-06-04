@@ -111,6 +111,7 @@ public class GroupButton{
 	
 			operatorPanel.add(groupButton[i]);
 			groupButton[i].setPreferredSize(new Dimension(60, 31));
+			groupButton[i].addActionListener(new MultiListener());
 			break;
 		case 17:
 			
@@ -294,7 +295,7 @@ i=(int)result;
 					screen.setText(screenListener);
 					isUpdate2=true;
 				}
-			    	isclickOnDash=true;
+				isclickOnSubstract=true;
 			
 				}
 		}
@@ -303,6 +304,7 @@ i=(int)result;
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
+			System.out.println(isclickOnOperator);
 			if(isclickOnOperator) {
 				screen.setText(String.valueOf(result));
 			}
@@ -390,6 +392,7 @@ i=(int)result;
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
+			System.out.println(isclickOnOperator);
 				if(isclickOnOperator) {
 					screen.setText(String.valueOf(result));
 				}
